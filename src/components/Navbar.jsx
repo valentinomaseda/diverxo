@@ -49,18 +49,18 @@ export default function Navbar() {
           <Link to="/" onClick={handleScrollToTop} className="flex items-center">
             <img src="/logo.png" alt="DiverXo Logo" className="h-10 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-110" />
           </Link>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-8 items-center">
             <Link 
               to="/" 
               onClick={handleScrollToTop}
-              className={`text-sm font-medium hover:text-brand transition-colors ${location.pathname === '/' ? 'text-brand' : 'text-gray-300'}`}
+              className={`text-xs tracking-[0.15em] uppercase transition-all duration-300 ${location.pathname === '/' ? 'text-brand font-medium' : 'text-gray-400 font-light hover:text-white'}`}
             >
               Inicio
             </Link>
             <a 
               href="/#menu" 
               onClick={handleScrollToMenu}
-              className={`text-sm font-medium hover:text-brand transition-colors text-gray-300`}
+              className={`text-xs tracking-[0.15em] uppercase font-light text-gray-400 hover:text-white transition-all duration-300`}
             >
               Menú
             </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
               href="https://wa.me/1234567890" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-white bg-brand rounded hover:bg-orange-700 transition-colors"
+              className="ml-2 px-6 py-2.5 text-xs tracking-[0.2em] uppercase font-medium text-brand border border-brand/50 rounded-sm hover:bg-brand hover:text-white hover:border-brand hover:shadow-glow transition-all duration-500"
             >
               Reservar
             </a>
