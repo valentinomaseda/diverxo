@@ -62,7 +62,7 @@ export default function Hero() {
             className="group px-10 py-4 relative overflow-hidden text-sm tracking-widest uppercase text-white transition-all"
           >
             <span className="relative z-10 font-light group-hover:text-brand transition-colors duration-300">
-              Menú de Autor
+              Nuestro menú
             </span>
             <div className="absolute bottom-0 left-0 h-[1px] w-full bg-brand/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
           </Link>

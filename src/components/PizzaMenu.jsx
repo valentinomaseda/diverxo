@@ -26,42 +26,63 @@ export default function PizzaMenu() {
     },
     { 
       id: 2, 
-      nombre: "Fugazzeta de Autor", 
+      nombre: "Fugazzeta DiverXO", 
       desc: "Blend de quesos, mermelada de cebolla morada reposada, flor de sal.", 
       category: "Clásicas",
       imagen: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=200&h=200"
     },
     { 
       id: 3, 
+      nombre: "Especial Napolitana", 
+      desc: "Rodajas de tomate fresco, ajo confitado, mozzarella, perejil y parmesano.", 
+      category: "Clásicas",
+      imagen: "https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&q=80&w=200&h=200"
+    },
+    { 
+      id: 4, 
       nombre: "Pepperoni & Miel", 
       desc: "Pepperoni curado, mozzarella, lluvia de miel picante.", 
       category: "Especiales",
       imagen: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&q=80&w=200&h=200"
     },
     { 
-      id: 4, 
+      id: 5, 
       nombre: "Azul y Peras", 
       desc: "Queso Roquefort, peras asadas al horno, nueces pecan garrapiñadas.", 
       category: "Especiales",
       imagen: "https://plus.unsplash.com/premium_photo-1667682209935-9069772ee785?auto=format&fit=crop&q=80&w=200&h=200"
     },
     { 
-      id: 5, 
+      id: 6, 
+      nombre: "Cuatro Quesos Plus", 
+      desc: "Mozzarella, provolone, roquefort y parmesano, con un toque de pimienta negra.", 
+      category: "Especiales",
+      imagen: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=200&h=200"
+    },
+    { 
+      id: 7, 
       nombre: "Prosciutto Di Parma", 
       desc: "Fior di latte, rúcula selvática, prosciutto italiano 24 meses, escamas de Grana Padano.", 
       category: "Premium",
       imagen: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?auto=format&fit=crop&q=80&w=200&h=200",
-      badge: "De Autor"
+      badge: "Especialidad"
     },
     { 
-      id: 6, 
+      id: 8, 
       nombre: "Trufada", 
       desc: "Carpaccio de trufa negra, crema de mascarpone, champiñones confitados, yema curada.", 
       category: "Premium",
       imagen: "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&q=80&w=200&h=200"
     },
     { 
-      id: 7, 
+      id: 9, 
+      nombre: "Burrata & Pesto", 
+      desc: "Corazón de burrata fresca, emulsión de pesto de albahaca y tomates cherry asados.", 
+      category: "Premium",
+      imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=200&h=200"
+    },
+    { 
+      id: 10, 
       nombre: "Carne Cortada a Cuchillo", 
       desc: "Receta tradicional salteña, carne braseada, huevo y verdeo. Fritas o al horno.", 
       category: "Empanadas",
@@ -69,11 +90,18 @@ export default function PizzaMenu() {
       badge: "Clásica"
     },
     { 
-      id: 8, 
+      id: 11, 
       nombre: "Queso Azul y Apio", 
       desc: "Blend de quesos con roquefort, apio crocante y nueces tostadas.", 
       category: "Empanadas",
       imagen: "https://images.unsplash.com/photo-1606927989938-16cb03ed5be4?auto=format&fit=crop&q=80&w=200&h=200"
+    },
+    { 
+      id: 12, 
+      nombre: "Humita Andina", 
+      desc: "Cremoso de choclo, zapallo, especias andinas y un toque de queso fundido.", 
+      category: "Empanadas",
+      imagen: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&q=80&w=200&h=200"
     }
   ];
 
@@ -107,9 +135,9 @@ export default function PizzaMenu() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="text-brand tracking-[0.2em] font-medium text-sm block mb-4 uppercase">Degustación</span>
+          <span className="text-brand tracking-[0.2em] font-medium text-sm block mb-4 uppercase">Para disfrutar</span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">
-            Colección de <i className="text-brand/90 font-light">Temporada</i>
+            Nuestro <i className="text-brand/90 font-light">Menú</i>
           </h2>
           <div className="w-16 h-[1px] bg-brand/30 mx-auto"></div>
         </motion.div>
