@@ -123,7 +123,7 @@ export default function PizzaMenu() {
   };
 
   return (
-    <section className="py-32 relative bg-dark">
+    <section id="menu" className="py-32 relative bg-dark">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-brand/5 blur-[120px] rounded-full pointer-events-none"></div>
 

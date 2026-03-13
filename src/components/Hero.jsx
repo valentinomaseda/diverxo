@@ -1,13 +1,20 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const handleScrollToMenu = (e) => {
+    e.preventDefault();
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       {/* Background Image with Parallax Feel (framer motion setup optional, sticky class handles it nicely) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1549996647-190b679b33d7?q=80&w=2070&auto=format&fit=crop" 
+          src="/hero.jpg" 
           alt="DiverXo Pizza Artesanal"
           className="w-full h-full object-cover fixed top-0"
         />
@@ -28,7 +35,7 @@ export default function Hero() {
           Experiencia Culinaria
         </span>
         <h1 
-          className="text-6xl sm:text-7xl md:text-9xl font-semibold mb-6 uppercase tracking-tighter drop-shadow-2xl max-w-full break-words"
+          className="text-6xl sm:text-7xl md:text-9xl font-semibold mb-6 tracking-tighter drop-shadow-2xl max-w-full break-words"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1549996647-190b679b33d7?q=80&w=2070&auto=format&fit=crop')",
             backgroundAttachment: "fixed",
@@ -57,15 +64,16 @@ export default function Hero() {
             Reservar Mesa
           </motion.a>
           
-          <Link 
-            to="/menu" 
+          <a 
+            href="#menu" 
+            onClick={handleScrollToMenu}
             className="group px-10 py-4 relative overflow-hidden text-sm tracking-widest uppercase text-white transition-all"
           >
             <span className="relative z-10 font-light group-hover:text-brand transition-colors duration-300">
               Nuestro menú
             </span>
             <div className="absolute bottom-0 left-0 h-[1px] w-full bg-brand/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-          </Link>
+          </a>
         </div>
       </motion.div>
     </section>
