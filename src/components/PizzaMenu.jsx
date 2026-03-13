@@ -29,7 +29,7 @@ export default function PizzaMenu() {
       nombre: "Fugazzeta DiverXO", 
       desc: "Blend de quesos, mermelada de cebolla morada reposada, flor de sal.", 
       category: "Clásicas",
-      imagen: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "/pizza.jpg"
     },
     { 
       id: 3, 
@@ -50,7 +50,7 @@ export default function PizzaMenu() {
       nombre: "Azul y Peras", 
       desc: "Queso Roquefort, peras asadas al horno, nueces pecan garrapiñadas.", 
       category: "Especiales",
-      imagen: "https://plus.unsplash.com/premium_photo-1667682209935-9069772ee785?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=200&h=200"
     },
     { 
       id: 6, 
@@ -86,7 +86,7 @@ export default function PizzaMenu() {
       nombre: "Carne Cortada a Cuchillo", 
       desc: "Receta tradicional salteña, carne braseada, huevo y verdeo. Fritas o al horno.", 
       category: "Empanadas",
-      imagen: "https://images.unsplash.com/photo-1628198622765-38507ab18228?auto=format&fit=crop&q=80&w=200&h=200",
+      imagen: "/emp.jpg",
       badge: "Clásica"
     },
     { 
@@ -94,14 +94,14 @@ export default function PizzaMenu() {
       nombre: "Queso Azul y Apio", 
       desc: "Blend de quesos con roquefort, apio crocante y nueces tostadas.", 
       category: "Empanadas",
-      imagen: "https://images.unsplash.com/photo-1606927989938-16cb03ed5be4?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "/emp2.jpg"
     },
     { 
       id: 12, 
       nombre: "Humita Andina", 
       desc: "Cremoso de choclo, zapallo, especias andinas y un toque de queso fundido.", 
       category: "Empanadas",
-      imagen: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "/emp3.jpg"
     }
   ];
 
