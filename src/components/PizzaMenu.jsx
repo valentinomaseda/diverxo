@@ -3,6 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function PizzaMenu() {
   const [activeCategory, setActiveCategory] = useState("Clásicas");
+  const [direction, setDirection] = useState(0);
+
+  const categories = ["Clásicas", "Especiales", "Premium", "Empanadas"];
+
+  const handleCategoryChange = (newCat) => {
+    if (newCat === activeCategory) return;
+    const currentIndex = categories.indexOf(activeCategory);
+    const newIndex = categories.indexOf(newCat);
+    setDirection(newIndex > currentIndex ? 1 : -1);
+    setActiveCategory(newCat);
+  };
 
   const pizzas = [
     { 
@@ -66,8 +77,22 @@ export default function PizzaMenu() {
     }
   ];
 
-  const categories = ["Clásicas", "Especiales", "Premium", "Empanadas"];
   const filteredPizzas = pizzas.filter(p => p.category === activeCategory);
+
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 150 : -150,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 150 : -150,
+      opacity: 0,
+    }),
+  };
 
   return (
     <section className="py-32 relative bg-dark">
@@ -94,7 +119,7 @@ export default function PizzaMenu() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`relative pb-2 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 \${
                 activeCategory === cat
                   ? "text-brand"
@@ -113,19 +138,30 @@ export default function PizzaMenu() {
         </div>
 
         {/* Grid Editorial */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 pt-10">
-          <AnimatePresence mode="popLayout">
-            {filteredPizzas.map((pizza, index) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                key={pizza.id}
-                className="relative glass-panel rounded-2xl p-8 pt-16 flex flex-col group hover:border-brand/20 transition-all duration-500 hover:shadow-glow/30"
-              >
-                {/* Imagen Circular Fotografía Gastronómica */}
+        <div className="relative min-h-[600px] overflow-hidden">
+          <AnimatePresence mode="popLayout" custom={direction}>
+            <motion.div
+              key={activeCategory}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 }
+              }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 pt-10"
+            >
+              {filteredPizzas.map((pizza, index) => (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  key={pizza.id}
+                  className="relative glass-panel rounded-2xl p-8 pt-16 flex flex-col group hover:border-brand/20 transition-all duration-500 hover:shadow-glow/30"
+                >
+                  {/* Imagen Circular Fotografía Gastronómica */}
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden border-4 border-dark shadow-2xl group-hover:scale-105 transition-transform duration-500">
                   <img 
                     src={pizza.imagen} 
@@ -146,9 +182,10 @@ export default function PizzaMenu() {
                   </p>
                 </div>
               </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -17,6 +17,7 @@ export default {
       },
       backgroundImage: {
         'noise': "url('https://grainy-gradients.vercel.app/noise.svg')", // Textura sutil
+        'light-marble': "url('https://www.transparenttextures.com/patterns/white-wall-3.png')", // Estética pared rústica/mármol
         'hero-gradient': "linear-gradient(to bottom, transparent, #0a0a09)",
       },
       boxShadow: {

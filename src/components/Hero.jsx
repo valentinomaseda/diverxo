@@ -42,7 +42,7 @@ export default function Hero() {
           Diver<span style={{ WebkitTextFillColor: "#D35400" }}>X</span>o
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-          Artesanía en cada fermentación. Descubre la verdadera esencia del horno de leña en el corazón de Arrecifes.
+          Artesanía en cada masa. Descubre la verdadera esencia de nuestra receta en el corazón de Arrecifes.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

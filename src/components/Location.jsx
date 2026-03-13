@@ -2,8 +2,13 @@ import { motion } from "framer-motion";
 
 export default function Location() {
   return (
-    <section className="bg-white py-32 relative text-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-32 relative text-dark bg-[#EAE5D9]">
+      <div 
+        className="absolute inset-0 z-0 opacity-40 mix-blend-multiply pointer-events-none"
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Info */}
           <motion.div 

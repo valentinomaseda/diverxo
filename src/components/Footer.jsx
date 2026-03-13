@@ -6,7 +6,7 @@ export default function Footer() {
           Diver<span className="text-brand">X</span>o
         </h2>
         <p className="text-gray-500 mb-8 max-w-md mx-auto">
-          Masa artesanal, horno de leña, pasión por lo que hacemos. Abierto toda la semana en Arrecifes, Buenos Aires.
+          Masa artesanal y pasión por lo que hacemos. Abierto toda la semana en Arrecifes, Buenos Aires.
         </p>
 
         <div className="flex justify-center space-x-6 mb-8">
