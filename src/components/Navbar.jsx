@@ -7,10 +7,10 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-brand/20 shadow-md transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-brand uppercase tracking-widest">
-            DiverXo
+          <Link to="/" className="flex items-center">
+            <img src="/logo.png" alt="DiverXo Logo" className="h-10 w-auto object-contain drop-shadow-lg" />
           </Link>
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center">
             <Link 
               to="/" 
               className={`text-sm font-medium hover:text-brand transition-colors \${location.pathname === '/' ? 'text-brand' : 'text-gray-300'}`}

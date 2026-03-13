@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-black py-12 border-t border-brand/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <footer className="relative z-20 bg-dark py-12 border-t border-brand/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-dark">
         <h2 className="text-3xl font-extrabold text-white tracking-widest uppercase mb-4">
           Diver<span className="text-brand">X</span>o
         </h2>

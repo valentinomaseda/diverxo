@@ -1,41 +1,62 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center text-center">
-      {/* Background Image Placeholder */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop')" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-dark"></div>
+    <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+      {/* Background Image with Parallax Feel (framer motion setup optional, sticky class handles it nicely) */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1549996647-190b679b33d7?q=80&w=2070&auto=format&fit=crop" 
+          alt="DiverXo Pizza Artesanal"
+          className="w-full h-full object-cover fixed top-0"
+        />
+        {/* Dark elegant gradients */}
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="absolute inset-0 bg-hero-gradient"></div>
+        {/* Noise overlay */}
+        <div className="absolute inset-0 mix-blend-overlay opacity-30 bg-noise pointer-events-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 uppercase tracking-tight">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10 max-w-4xl mx-auto px-4 mt-16"
+      >
+        <span className="text-brand tracking-[0.3em] font-medium text-sm md:text-base uppercase mb-4 block">
+          Experiencia Culinaria
+        </span>
+        <h1 className="text-7xl md:text-9xl font-semibold text-white mb-6 uppercase tracking-tighter drop-shadow-2xl">
           Diver<span className="text-brand">X</span>o
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light">
-          La mejor pizza en horno de barro de Arrecifes.
+        <p className="text-lg md:text-xl text-gray-300 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+          Artesanía en cada fermentación. Descubre la verdadera esencia del horno de leña en el corazón de Arrecifes.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <motion.a 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="https://wa.me/1234567890" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-brand text-white font-bold rounded shadow-lg shadow-brand/20 hover:bg-orange-700 hover:-translate-y-1 transition-all"
+            className="px-10 py-4 bg-brand text-white text-sm tracking-widest uppercase rounded-sm hover:shadow-glow hover:bg-orange-600 transition-all duration-300"
           >
-            Reservar por WhatsApp
-          </a>
+            Reservar Mesa
+          </motion.a>
+          
           <Link 
             to="/menu" 
-            className="px-8 py-4 bg-transparent border border-brand text-brand font-bold rounded hover:bg-brand/10 hover:-translate-y-1 transition-all"
+            className="group px-10 py-4 relative overflow-hidden text-sm tracking-widest uppercase text-white transition-all"
           >
-            Ver Menú
+            <span className="relative z-10 font-light group-hover:text-brand transition-colors duration-300">
+              Menú de Autor
+            </span>
+            <div className="absolute bottom-0 left-0 h-[1px] w-full bg-brand/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

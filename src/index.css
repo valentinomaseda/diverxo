@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #121212;
-  color: #eeeeee;
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+@layer base {
+  body {
+    @apply bg-dark text-gray-200 antialiased font-sans;
+    /* Aplicar sutilmente la textura de ruido como fondo base */
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #0a0a09;
+    background-blend-mode: overlay;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface backdrop-blur-xl border border-white/5 shadow-glass;
 }
