@@ -10,7 +10,8 @@ export default function PizzaMenu() {
       nombre: "Margarita Auténtica", 
       desc: "Salsa San Marzano, fior di latte importada, albahaca fresca y AOVE.", 
       category: "Clásicas",
-      imagen: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=200&h=200",
+      badge: "Best Seller"
     },
     { 
       id: 2, 
@@ -38,7 +39,8 @@ export default function PizzaMenu() {
       nombre: "Prosciutto Di Parma", 
       desc: "Fior di latte, rúcula selvática, prosciutto italiano 24 meses, escamas de Grana Padano.", 
       category: "Premium",
-      imagen: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?auto=format&fit=crop&q=80&w=200&h=200",
+      badge: "De Autor"
     },
     { 
       id: 6, 
@@ -52,7 +54,8 @@ export default function PizzaMenu() {
       nombre: "Carne Cortada a Cuchillo", 
       desc: "Receta tradicional salteña, carne braseada, huevo y verdeo. Fritas o al horno.", 
       category: "Empanadas",
-      imagen: "https://images.unsplash.com/photo-1628198622765-38507ab18228?auto=format&fit=crop&q=80&w=200&h=200"
+      imagen: "https://images.unsplash.com/photo-1628198622765-38507ab18228?auto=format&fit=crop&q=80&w=200&h=200",
+      badge: "Clásica"
     },
     { 
       id: 8, 
@@ -87,12 +90,12 @@ export default function PizzaMenu() {
         </motion.div>
 
         {/* Categoria Tabs */}
-        <div className="flex justify-center flex-wrap gap-8 mb-20">
+        <div className="flex justify-center flex-wrap gap-4 sm:gap-8 mb-20 px-2">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`relative pb-2 text-sm tracking-widest uppercase transition-all duration-300 \${
+              className={`relative pb-2 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 \${
                 activeCategory === cat
                   ? "text-brand"
                   : "text-gray-500 hover:text-white"

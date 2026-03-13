@@ -19,16 +19,27 @@ export default function Hero() {
       </div>
 
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        initial={{ opacity: 0, filter: "blur(12px)", y: 30 }}
+        animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         className="relative z-10 max-w-4xl mx-auto px-4 mt-16"
       >
         <span className="text-brand tracking-[0.3em] font-medium text-sm md:text-base uppercase mb-4 block">
           Experiencia Culinaria
         </span>
-        <h1 className="text-7xl md:text-9xl font-semibold text-white mb-6 uppercase tracking-tighter drop-shadow-2xl">
-          Diver<span className="text-brand">X</span>o
+        <h1 
+          className="text-6xl sm:text-7xl md:text-9xl font-semibold mb-6 uppercase tracking-tighter drop-shadow-2xl max-w-full break-words"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1549996647-190b679b33d7?q=80&w=2070&auto=format&fit=crop')",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            color: "transparent"
+          }}
+        >
+          Diver<span style={{ WebkitTextFillColor: "#D35400" }}>X</span>o
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
           Artesanía en cada fermentación. Descubre la verdadera esencia del horno de leña en el corazón de Arrecifes.
