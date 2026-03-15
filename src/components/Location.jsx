@@ -32,7 +32,7 @@ export default function Location() {
                   </svg>
                 </div>
                 <div className="ml-6">
-                  <p className="text-xl font-serif text-dark mb-1">Av. Principal 1234, Arrecifes</p>
+                  <p className="text-xl font-serif text-dark mb-1">DiverXo Arrecifes</p>
                   <p className="text-gray-500 font-light text-sm">Provincia de Buenos Aires</p>
                 </div>
               </li>
@@ -71,11 +71,10 @@ export default function Location() {
             className="h-[400px] lg:h-[500px] w-full bg-zinc-100 relative group overflow-hidden shadow-2xl"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.262529944062!2d-60.10606!3d-34.0664801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9c054f02ec3b7%3A0x6e9a66b5bdee93fc!2sArrecifes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.2806730364537!2d-60.105066924552446!3d-34.062318629107864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b99d3a533a0759%3A0x3ac42452b04397d9!2sDiverXo%20Arrecifes!5e0!3m2!1ses-419!2sar!4v1773612705826!5m2!1ses-419!2sar"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'grayscale(100%) contrast(1.2)' }}
-              className="transition-all duration-700 group-hover:filter-none"
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
